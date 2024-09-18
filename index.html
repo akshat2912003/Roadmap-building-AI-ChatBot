@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat with Your Career Advisor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* General reset and styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    /* Button styling */
+    button {
+      background-color: #4a90e2;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    button:hover {
+      background-color: #2a6ab9;
+    }
+
+    /* Chatbot container */
+    .chatbot-container {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+    }
+
+    .chatbot-icon {
+      font-size: 50px;
+      margin-bottom: 20px;
+      color: #fff;
+      animation: bounce 1s infinite;
+    }
+
+    /* Chatbot button animation */
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="chatbot-container">
+    <h1>Welcome to My Chatbot!</h1>
+    <h2>Ask Your Career Roadmap</h2>
+
+    <!-- Chatbot Icon -->
+    <div class="chatbot-icon">🤖</div>
+
+    <!-- Button to Open Chatbot -->
+    <button onclick="openChatbot()">Start Chat</button>
+  </div>
+
+  <script>
+    // JavaScript to open the chatbot
+    function openChatbot() {
+      window.botpressWebChat.sendEvent({
+        type: 'show'
+      });
+    }
+  </script>
+
+  <script src="https://cdn.botpress.cloud/webchat/v2.1/inject.js"></script>
+  <script src="https://mediafiles.botpress.cloud/69b6cb58-ac6b-4108-b2b6-01c6ff8f025f/webchat/v2.1/config.js"></script>
+
+</body>
+
+</html>
